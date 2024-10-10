@@ -17,9 +17,9 @@ function displayOutput(data) {
 
     for(a in data) {
         output += `
-            <tr onClick="editContact(${data[a].id})">
+            <tr onClick="editContact(${data[a].id})" class="individualContact">
               <td>
-                <img src="${rootPath}controller/uploads/${data[a].avatar}" width="40"/>
+                <img src="${rootPath}controller/uploads/${data[a].avatar}" width="80"/>
               </td>
               <td><h5>${data[a].firstname}</h5></td>
               <td><h5>${data[a].lastname}</h5></td>

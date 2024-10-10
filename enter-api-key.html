@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>Please enter a valid API key</div>
-    <form>
-        <input type="email" id="apiKey" name="apiKey"/>
-        <button id="submitApiKey">Submit</button>
-    </form>
+    <div class="wrapper">
+        <h3>Welcome to My Contact Book</h3>
+        <p>Please enter a valid API key</p>
+    
+        <form>
+            <input type="email" id="apiKey" name="apiKey" placeholder="Enter email given below"/> <br>
+            <button id="submitApiKey">Submit</button>
+        </form>
 
+        <p class="NB">Note: To use this app enter this email in the text feild <span>chiwanza16@gmail.com</span></p>
+
+        <p>Copyright &copy; 2024. All Rights Reserved</p>
+    </div>
     <script>
         let rootPath = "https://mysite.itvarsity.org/api/ContactBook/";
         document.getElementById("submitApiKey").addEventListener('click', setApiKey);

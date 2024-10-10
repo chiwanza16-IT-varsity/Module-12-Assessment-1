@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body onload="getContact()">
+    <div class="editContact">
     <div id="avatarImage"></div>
     <form id="editForm">
         <label for="firstname">First name</label>
@@ -26,9 +27,10 @@
         <button type="submit" id="submitForm" hidden>Submit</button>
     </form>
     <br> <br>
-    <button id="homeLink" type="button">Home</button>
+    <button id="homeLink" type="button">&LeftArrow; Home</button>
     <button id="editContact" type="button">Edit</button>
     <button id="deleteContact" type="button">Delete</button>
+   </div>
 
     <script src="config.js"></script>
     <script>
@@ -62,7 +64,7 @@
 
         function displayOutput(data) {
             avatarImg = `
-                <img src="${rootPath}/controller/uploads/${data[0].avatar}" width="200" />
+                <img src="${rootPath}/controller/uploads/${data[0].avatar}" width="400" />
             `
           document.getElementById("avatarImage").innerHTML = avatarImg;
           document.getElementById("firstname").value = data[0].firstname;
